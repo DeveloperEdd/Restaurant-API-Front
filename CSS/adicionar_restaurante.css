@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Bonbon&family=Noto+Sans+Zanabazar+Square&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Noto Sans Zanabazar Square", sans-serif; */
+}
+
+:root {
+  --input-color: #000;
+
+  --background-color-form: #fff;
+  --color-dark-red: #800000;
+  --color-btn-red: #f00;
+  --color-white: #fff;
+  --h2-color: #5c4033;
+  --line-color: #ccc;
+  --h1-color: #f00;
+  --hover-color: #800000;
+  --background-img: url(../IMG/Imagem_de_fundo.jpeg);
+  --theme-img: url(../IMG/moon.svg);
+}
+
+body {
+  background-image: var(--background-img);
+  background-position: center;
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  height: 100vh;
+  /* width: 100vw; */
+
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Noto Sans Zanabazar Square", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Marcellus SC", cursive;
+  font-weight: 500;
+  /* font-style: normal; */
+  /* background-color: white; */
+  font-size: 45px;
+  color: var(--h1-color);
+}
+
+h2 {
+  text-align: center;
+  color: var(--h2-color);
+}
+
+p {
+  text-align: center;
+  margin-top: 20px 0;
+  color: var(--h2-color);
+}
+
+form {
+  background-color: var(--background-color-form);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  max-width: 500px;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
+  padding: 0 10px;
+}
+
+.in_bu2 {
+  padding: 1px 10px;
+  font-size: 17px;
+  color: var(--color-btn-red);
+  margin: 0%;
+  text-decoration: none;
+}
+
+.in_bu2:hover {
+  border-bottom: solid 1px var(--color-btn-red);
+}
+
+.cada_entrada {
+  position: relative;
+  margin: 30px 0;
+  color: var(--h2-color);
+}
+
+.cada_entrada label {
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  transition: all 0.2s;
+  cursor: text;
+}
+
+.entrada {
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid var(--line-color);
+  padding: 5px;
+  font-size: 17px;
+  outline: 0;
+  background: none;
+  color: var(--h2-color);
+}
+
+form .cada_entrada .entrada:focus ~ label,
+form .cada_entrada .entrada:valid ~ label {
+  transform: translateY(-24px);
+  font-size: 12px;
+  /*color: brown;*/
+}
+
+form text[type="submit"] {
+  padding: 10px 40px;
+  border: 0;
+  border-radius: 10px;
+  background-color: brown;
+  color: white;
+  cursor: pointer;
+}
+
+.btn {
+  width: 100%;
+  text-align: center;
+}
+
+form input[type="submit"] {
+  padding: 10px 40px;
+  border: 0;
+  border-radius: 10px;
+  background-color: var(--color-btn-red);
+  font-size: 17px;
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+#themeSwitcher {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 2rem 2.5rem;
+  width: 1.125rem;
+  background: transparent;
+  border: transparent;
+  cursor: pointer;
+}
