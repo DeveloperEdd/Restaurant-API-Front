@@ -1,7 +1,7 @@
 const root = document.querySelector(':root');
 const body = document.querySelector('body');
 
-document.getElementById('themeSwitcher').addEventListener('click', function() {
+document.getElementById('themeSwitcher').addEventListener('click', function () {
     if (body.dataset.theme === 'light') {
         root.style.setProperty('--background-color-form', '#1f1f1f')
         root.style.setProperty('--color-btn-red', '#800000');
@@ -18,5 +18,3 @@ document.getElementById('themeSwitcher').addEventListener('click', function() {
         body.dataset.theme = 'light';
     }
 })
-
-// TODO: Adicionar seletor de caracteres
