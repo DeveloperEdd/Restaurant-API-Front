@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paladar Apurado - Avaliar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../CSS/avaliar.css" />
+    <script src="../JS/avaliar.js" defer></script>
+  </head>
+  <body data-theme="light">
+    <button id="themeSwitcher"><img src="../IMG/moon.svg" alt="Alternar Temas"></button>
+    <section>
+      <div class="container_do_formulario">
+        <div class="container">
+          <form action="">
+            <a class="in_bu2" href="index.html"><span style="font-size: 25px">&larr;</span> Início</a>
+            <h1>Paladar Apurado</h1>
+            <h2>Avaliar Restaurante</h2>
+            <p>Somos uma ONG que coleta avaliações de restaurantes.<br />Ficaríamos gratos em receber a sua avaliação.<br />Preencha os campos abaixo e clique em "Pronto!".</p>
+            <div class="cada_entrada">
+              <input type="text" name="" id="nomeRestauranteAvaliacao" class="entrada" autocomplete="off" required/>
+              <label for="nome-box">Nome do restaurante</label>
+            </div>
+
+            <div class="cada_entrada">
+              <input type="text" name="" id="comentario" class="entrada" autocomplete="off" required/>
+              <label for="email-box">Seu comentário</label>
+            </div>
+            <div class="container">
+              <div class="rating-wrapper">
+                <h3 class="rating-label">Avalie o atendimento</h3>
+                <div class="rating-star">
+                  <input type="radio" name="atendimento" value="5.0" />
+                  <input type="radio" name="atendimento" value="4.5" />
+                  <input type="radio" name="atendimento" value="4.0" />
+                  <input type="radio" name="atendimento" value="3.5" />
+                  <input type="radio" name="atendimento" value="3.0" />
+                  <input type="radio" name="atendimento" value="2.5" />
+                  <input type="radio" name="atendimento" value="2.0" />
+                  <input type="radio" name="atendimento" value="1.5" />
+                  <input type="radio" name="atendimento" value="1.0" />
+                  <input type="radio" name="atendimento" value="0.5" />
+                </div>
+              </div>
+              <div class="rating-wrapper">
+                <h3 class="rating-label">Avalie a comida</h3>
+                <div class="rating-star rating-green">
+                  <input type="radio" name="comida" value="5.0" />
+                  <input type="radio" name="comida" value="4.5" />
+                  <input type="radio" name="comida" value="4.0" />
+                  <input type="radio" name="comida" value="3.5" />
+                  <input type="radio" name="comida" value="3.0" />
+                  <input type="radio" name="comida" value="2.5" />
+                  <input type="radio" name="comida" value="2.0" />
+                  <input type="radio" name="comida" value="1.5" />
+                  <input type="radio" name="comida" value="1.0" />
+                  <input type="radio" name="comida" value="0.5" />
+                </div>
+              </div>
+              <div class="rating-wrapper">
+                <h3 class="rating-label">Avalie o ambiente</h3>
+                <div class="rating-star rating-blue">
+                  <input type="radio" name="ambiente" value="5.0" />
+                  <input type="radio" name="ambiente" value="4.5" />
+                  <input type="radio" name="ambiente" value="4.0" />
+                  <input type="radio" name="ambiente" value="3.5" />
+                  <input type="radio" name="ambiente" value="3.0" />
+                  <input type="radio" name="ambiente" value="2.5" />
+                  <input type="radio" name="ambiente" value="2.0" />
+                  <input type="radio" name="ambiente" value="1.5" />
+                  <input type="radio" name="ambiente" value="1.0" />
+                  <input type="radio" name="ambiente" value="0.5" />
+                </div>
+              </div>
+            </div>
+            <div class="btn">
+              <input type="submit" id="send" value="Pronto!" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

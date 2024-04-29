@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Bonbon&family=Noto+Sans+Zanabazar+Square&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap");
+
+/* Normalizar página */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Declaração de Variáveis */
+:root {
+  --h1-color: #f00;
+  --h2-color: #5c4033;
+  --background-color-form: #fff;
+  --color-btn-red: #f00;
+  --line-color: #ccc;
+  --color-white: #fff;
+  --hover-color: #800000;
+  --star-color: #d4d4d4;
+  --yellow: #ffeb3b;
+
+  --background-img: url(../IMG/Imagem_de_fundo.jpeg);
+  --theme-img: url(../IMG/moon.svg);
+}
+
+/* Corpo do HTML */
+body {
+  background-image: var(--background-img);
+  background-position: center;
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  height: 100vh;
+  /* width: 100vw; */
+
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Noto Sans Zanabazar Square", sans-serif;
+}
+
+/* Título Principal ('Paladar Apurado') */
+h1 {
+  text-align: center;
+  font-family: "Marcellus SC", cursive;
+  font-weight: 500;
+  /* font-style: normal; */
+  /* background-color: white; */
+  font-size: 45px;
+  color: var(--h1-color);
+}
+
+/* Texto secundário ('Avaliar Restaurante') */
+h2 {
+  text-align: center;
+  color: var(--h2-color);
+}
+
+/* Texto comuns */
+p {
+  text-align: center;
+  margin-top: 20px 0;
+  color: var(--h2-color);
+}
+
+form {
+  background-color: var(--background-color-form);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  max-width: 500px;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
+  padding: 0 10px;
+}
+
+.in_bu2 {
+  padding: 1px 10px; /* Experimentar -> trocar padding por margin */
+  font-size: 17px;
+  color: var(--color-btn-red);
+  margin: 0%;
+  text-decoration: none;
+}
+
+.in_bu2:hover {
+  border-bottom: solid 1px var(--color-btn-red);
+  /* color: var(--hover-color); */
+}
+
+.cada_entrada {
+  position: relative;
+  margin: 30px 0;
+  color: var(--h2-color);
+}
+
+.cada_entrada label {
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  transition: all 0.2s;
+  cursor: text;
+}
+
+.entrada {
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid var(--line-color);
+  padding: 5px;
+  font-size: 17px;
+  outline: 0;
+  background: none;
+  color: var(--h2-color);
+}
+
+form .cada_entrada .entrada:focus ~ label,
+form .cada_entrada .entrada:valid ~ label {
+  transform: translateY(-24px);
+  font-size: 12px;
+  /*color: brown;*/
+}
+
+form text[type="submit"] {
+  padding: 10px 40px;
+  border: 0;
+  border-radius: 10px;
+  background-color: var(--h2-color);
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.btn {
+  width: 100%;
+  text-align: center;
+}
+
+form input[type="submit"] {
+  padding: 10px 40px;
+  border: 0;
+  border-radius: 10px;
+  background-color: var(--color-btn-red);
+  font-size: 17px;
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background-color: var(--hover-color);
+}
+
+#themeSwitcher {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 2rem 2.5rem;
+  width: 1.125rem;
+  background: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+
+.avaliacao {
+  display: flex;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.rating-label {
+  font-family: "Noto Sans Zanabazar Square", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 17px;
+  color: var(--h2-color);
+}
+.rating-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rating-star {
+  position: relative;
+  display: flex;
+  margin: 10px 0;
+  flex-direction: row-reverse;
+}
+
+.rating-star input {
+  position: relative;
+  width: 20px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  appearance: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.rating-star input::before {
+  content: "\eeb8";
+  position: absolute;
+  font-family: boxicons;
+  font-size: 34px;
+  position: absolute;
+  left: 4px;
+  color: var(--star-color);
+  transition: all 0.3s;
+}
+
+.rating-star input:nth-child(2n + 1)::before {
+  right: 4px;
+  left: initial;
+}
+
+.rating-star input:hover ~ input::before,
+.rating-star input:hover::before,
+.rating-star input:checked ~ input::before,
+.rating-star input:checked::before {
+  color: var(--yellow);
+}
+
+.rating-star.rating-blue input:hover ~ input::before,
+.rating-star.rating-blue input:hover::before,
+.rating-star.rating-blue input:checked ~ input::before,
+.rating-star.rating-blue input:checked::before {
+  color: var(--yellow);
+}
+
+.rating-star.rating-green input:hover ~ input::before,
+.rating-star.rating-green input:hover::before,
+.rating-star.rating-green input:checked ~ input::before,
+.rating-star.rating-green input:checked::before {
+  color: var(--yellow);
+}
