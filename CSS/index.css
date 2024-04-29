@@ -62,7 +62,7 @@ form {
 /* Para que serve esse elemento? */
 p {
     text-align: center;
-    margin-top: 20px 0;
+    margin-top: 20px;
     color: var(--h2-color);
 }
 
