@@ -5,12 +5,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* font-family: "Noto Sans Zanabazar Square", sans-serif; */
 }
 
 :root {
-  --input-color: #000;
-
   --background-color-form: #fff;
   --color-dark-red: #800000;
   --color-btn-red: #f00;
@@ -142,6 +139,10 @@ form input[type="submit"] {
   font-size: 17px;
   color: var(--color-white);
   cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background-color: var(--hover-color);
 }
 
 #themeSwitcher {
